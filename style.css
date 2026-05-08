@@ -7,7 +7,10 @@
 }
 
 body {
-    background: linear-gradient(135deg, #c5a66b 0%, #a38952 100%);
+    /* Substitua 'fundo.jpg' pelo nome do seu arquivo de imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +22,11 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco bem transparente */
+    backdrop-filter: blur(10px); /* O segredo do efeito de vidro */
+    padding: 30px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Cabeçalho */
