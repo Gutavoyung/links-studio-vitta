@@ -5,61 +5,54 @@
 }
 
 body {
-    background-color: #f4e9e2; /* Cor de fundo combinando com a imagem */
+    background-color: #d8c3b6; /* Cor de fundo que combina com a borda da foto */
     display: flex;
     justify-content: center;
-    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px; /* Mantém a proporção em telas grandes */
     min-height: 100vh;
-}
-
-.card-container {
-    width: 100%;
-    max-width: 450px; /* Largura máxima de um smartphone */
-    height: 100vh;
-    background: url('fundo.jpg') no-repeat center center;
-    background-size: contain; /* Garante que a imagem apareça toda */
+    background: url('fundo.jpg') no-repeat center top;
+    background-size: 100% auto;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.links-overlay {
+/* Localização exata do bloco de botões na imagem */
+.button-grid {
     position: absolute;
-    top: 23%; /* Ajuste esse valor para os botões subirem ou descerem */
-    left: 0;
-    width: 100%;
+    top: 23.8%; /* Ajuste fino para alinhar com o primeiro botão */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%; /* Largura da área clicável */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.2vh; /* Espaçamento entre os botões */
+    gap: 1.15%; /* Espaço proporcional entre os botões da imagem */
 }
 
-.btn-link {
-    width: 80%;
-    height: 5.5vh; /* Altura de cada botão na imagem */
-    display: block;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0); /* Invisível para manter a beleza da imagem */
-    border-radius: 50px;
-    transition: background 0.3s ease;
-}
-
-/* Efeito visual ao tocar/clicar (opcional) */
-.btn-link:active {
-    background: rgba(184, 134, 117, 0.2); /* Um leve brilho Rose Gold ao tocar */
-}
-
-.social-footer {
-    position: absolute;
-    bottom: 3%;
+.invisible-btn {
     width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    height: 55px; /* Altura de cada botão */
+    background: rgba(255, 0, 0, 0.0); /* Mude para 0.0 para ficar invisível */
+    border-radius: 30px;
+    margin-bottom: 5px; /* Ajuste se os botões saírem do lugar */
 }
 
-.social-icon {
-    width: 40px;
-    height: 40px;
-    background: transparent;
+/* Ajuste específico para o ícone do Instagram lá embaixo */
+.instagram-footer-btn {
+    position: absolute;
+    bottom: 4%; /* Ajusta a altura do ícone no rodapé */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 255, 0.0); /* Mude para 0.0 para ficar invisível */
+    border-radius: 50%;
+}
+
+/* Efeito ao pressionar o botão */
+.invisible-btn:active, .instagram-footer-btn:active {
+    background: rgba(255, 255, 255, 0.2);
 }
