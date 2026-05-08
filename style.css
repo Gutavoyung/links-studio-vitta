@@ -15,7 +15,7 @@ body {
     width: 100%;
     max-width: 500px; /* Mantém a proporção em telas grandes */
     height: 100vh; /* Força o contêiner a ter a altura total da tela */
-    background: url('fundo_2.jpg') no-repeat center bottom; /* Alinha o fundo na parte inferior */
+    background: url('fundo.jpg') no-repeat center bottom; /* Alinha o fundo na parte inferior */
     background-size: cover; /* Faz a imagem cobrir toda a área, esticando se necessário */
     position: relative;
     overflow: hidden; /* Evita barras de rolagem desnecessárias */
