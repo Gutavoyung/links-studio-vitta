@@ -30,7 +30,7 @@ body {
     width: 85%; /* Largura da área clicável */
     display: flex;
     flex-direction: column;
-    gap: 1.15%; /* Espaço proporcional entre os botões da imagem */
+    gap: 1.25%; /* Espaço proporcional entre os botões da imagem */
 }
 
 .invisible-btn {
