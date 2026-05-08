@@ -21,24 +21,22 @@ body {
     overflow: hidden; /* Evita barras de rolagem desnecessárias */
 }
 
-/* Localização exata do bloco de botões na imagem */
 .button-grid {
     position: absolute;
-    top: 23.8%; /* Ajuste fino para alinhar com o primeiro botão */
+    top: 24.2%; /* <- AJUSTE AQUI: Aumente para descer o bloco todo, diminua para subir */
     left: 50%;
     transform: translateX(-50%);
-    width: 85%; /* Largura da área clicável */
+    width: 82%; /* <- AJUSTE AQUI: Largura horizontal dos botões */
     display: flex;
     flex-direction: column;
-    gap: 1.25%; /* Espaço proporcional entre os botões da imagem */
+    gap: 1.4vh; /* <- AJUSTE AQUI: Espaçamento entre um botão e outro */
 }
 
 .invisible-btn {
     width: 100%;
-    height: 55px; /* Altura de cada botão */
-    background: rgba(255, 0, 0, 0.0); /* Mude para 0.0 para ficar invisível */
-    border-radius: 30px;
-    margin-bottom: 5px; /* Ajuste se os botões saírem do lugar */
+    height: 5.6vh; /* <- AJUSTE AQUI: Altura individual de cada botão */
+    background: rgba(255, 0, 0, 0.4); 
+    border-radius: 50px;
 }
 
 /* Ajuste específico para o ícone do Instagram lá embaixo */
