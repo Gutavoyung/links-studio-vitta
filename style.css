@@ -29,7 +29,7 @@ body {
     width: 82%; /* <- AJUSTE AQUI: Largura horizontal dos botões */
     display: flex;
     flex-direction: column;
-    gap: 1.4vh; /* <- AJUSTE AQUI: Espaçamento entre um botão e outro */
+    gap: 1.0vh; /* <- AJUSTE AQUI: Espaçamento entre um botão e outro */
 }
 
 .invisible-btn {
