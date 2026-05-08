@@ -1,100 +1,65 @@
-/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
-    /* Substitua 'fundo.jpg' pelo nome do seu arquivo de imagem */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('fundo.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #f4e9e2; /* Cor de fundo combinando com a imagem */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
 }
 
-.container {
+.card-container {
     width: 100%;
-    max-width: 400px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1); /* Fundo branco bem transparente */
-    backdrop-filter: blur(5px); /* O segredo do efeito de vidro */
-    padding: 30px 20px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 450px; /* Largura máxima de um smartphone */
+    height: 100vh;
+    background: url('fundo.jpg') no-repeat center center;
+    background-size: contain; /* Garante que a imagem apareça toda */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Cabeçalho */
-header {
-    margin-bottom: 30px;
-    color: white;
-}
-
-.profile-pic img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    margin-bottom: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-header p {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    text-transform: uppercase;
-}
-
-/* Links Dinâmicos */
-.links {
+.links-overlay {
+    position: absolute;
+    top: 23%; /* Ajuste esse valor para os botões subirem ou descerem */
+    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-.link-card {
-    background: white;
-    color: #333;
-    text-decoration: none;
-    padding: 18px;
-    border-radius: 12px;
-    display: flex;
     align-items: center;
+    gap: 1.2vh; /* Espaçamento entre os botões */
+}
+
+.btn-link {
+    width: 80%;
+    height: 5.5vh; /* Altura de cada botão na imagem */
+    display: block;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0); /* Invisível para manter a beleza da imagem */
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+/* Efeito visual ao tocar/clicar (opcional) */
+.btn-link:active {
+    background: rgba(184, 134, 117, 0.2); /* Um leve brilho Rose Gold ao tocar */
+}
+
+.social-footer {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    height: 50px;
+    display: flex;
     justify-content: center;
-    gap: 12px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    gap: 20px;
 }
 
-/* Efeito de Hover (Passar o mouse) */
-.link-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    background: #f8f8f8;
-}
-
-.link-card.secondary {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px); /* Efeito de vidro */
-}
-
-/* Rodapé */
-footer {
-    margin-top: 40px;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.8rem;
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: transparent;
 }
