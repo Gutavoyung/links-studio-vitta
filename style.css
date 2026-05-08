@@ -1,0 +1,92 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #c5a66b 0%, #a38952 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+/* Links Dinâmicos */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    background: white;
+    color: #333;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Efeito de Hover (Passar o mouse) */
+.link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: #f8f8f8;
+}
+
+.link-card.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px); /* Efeito de vidro */
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+}
